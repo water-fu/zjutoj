@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.system.RoleInfoBean" 
+    table="system_role_info"
+>
+
+<id
+        name="roleId"
+        type="int"
+        column="ROLE_ID"
+        length="10"
+    >
+	<generator class="native" />
+</id>
+<property
+        name="roleName"
+        type="java.lang.String"
+        column="ROLE_NAME"
+        length="40"
+    />
+<property
+        name="roleDesc"
+        type="java.lang.String"
+        column="ROLE_DESC"
+        length="200"
+    />
+<property
+        name="operDate"
+        type="java.util.Date"
+        column="OPER_DATE"
+        length="19"
+    />
+<many-to-one name="userInfoBean" class="com.zjut.oj.entity.system.UserInfoBean" column="OPER_USER" fetch="join" lazy="false" />
+
+<set name="rolePrivs" lazy="false" fetch="join" inverse="true">
+	<!-- key是外键   -->
+	<key column="ROLE_ID" />
+	<one-to-many class="com.zjut.oj.entity.system.RolePrivBean" />
+</set>  
+</class>
+</hibernate-mapping>

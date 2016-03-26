@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC     
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"     
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="study" namespace="/study" extends="zjutoj-struts">
+	    <action name="problemInfoAction" class="problemInfoAction">
+	       	<result name="list">/pages/study/problemInfo/list.jsp</result>
+	       	<result name="detail">/pages/study/problemInfo/detail.jsp</result>
+	       	
+	       	<result name="mlist">/pages/admin/problemInfo/list.jsp</result>
+	       	<result name="mdetail">/pages/admin/problemInfo/detail.jsp</result>
+	       	<result name="editUI">/pages/admin/problemInfo/edit.jsp</result>
+	       	
+	       	<result name="data">/pages/admin/problemAttach/list.jsp</result>
+	       	
+	       	<result name="cpdetail">/pages/admin/contestInfo/problemDetail.jsp</result>
+	       	
+	       	<result name="delete" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="status" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	    
+	    <action name="problemAttachAction" class="problemAttachAction">
+	       	<result name="uploadUI">/pages/admin/problemAttach/upload.jsp</result>
+	       	<result name="modifyUI">/pages/admin/problemAttach/edit.jsp</result>
+	       	
+	       	<result name="delete" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="upload" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	    
+	    <action name="commentInfoAction" class="commentInfoAction">
+	    	<result name="list">/pages/study/commentInfo/list.jsp</result>
+	    	<result name="detail">/pages/study/commentInfo/detail.jsp</result>
+	    	<result name="saveUI">/pages/study/commentInfo/edit.jsp</result>
+	    	
+	    	<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	    
+	    <action name="answerInfoAction" class="answerInfoAction">
+	    	<result name="list">/pages/study/answerInfo/list.jsp</result>
+	    	<result name="detail">/pages/study/answerInfo/detail.jsp</result>
+	    	<result name="saveUI">/pages/study/answerInfo/edit.jsp</result>
+	    	
+	    	<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    	<result name="delete" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	
+	       	<result name="mlist">/pages/admin/answerInfo/list.jsp</result>
+	       	<result name="mdetail">/pages/admin/answerInfo/detail.jsp</result>
+	    	<result name="msaveUI">/pages/admin/answerInfo/edit.jsp</result>
+	       	<result name="show" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	</package>
+</struts>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.study.ProblemInfoBean" 
+    table="study_problem_info"
+>
+
+	<id
+        name="problemId"
+        type="int"
+        column="PROBLEM_ID"
+        length="10"
+    >
+    	<generator class="native" />
+    </id>
+	<property
+        name="problemTitle"
+        type="java.lang.String"
+        column="PROBLEM_TITLE"
+        length="40"
+    />
+	<property
+        name="isShow"
+        type="int"
+        column="IS_SHOW"
+        length="10"
+    />
+    <property
+        name="timeLimit"
+        type="int"
+        column="TIME_LIMIT"
+        length="10"
+    />
+    <property
+        name="memLimit"
+        type="int"
+        column="MEM_LIMIT"
+        length="10"
+    />
+	<property
+        name="problemLevel"
+        type="java.lang.String"
+        column="PROBLEM_LEVEL"
+        length="40"
+    />
+	<property
+        name="problemType"
+        type="java.lang.String"
+        column="PROBLEM_TYPE"
+        length="40"
+    />
+	<property
+        name="operDate"
+        type="java.util.Date"
+        column="OPER_DATE"
+        length="19"
+    />
+	<many-to-one name="userInfoBean" class="com.zjut.oj.entity.system.UserInfoBean" column="OPER_USER" fetch="join" lazy="false" />
+	<many-to-one name="problemUserBean" class="com.zjut.oj.entity.system.UserInfoBean" column="PROBLEM_USER" fetch="join" lazy="false" />
+	<set name="problemAttachs" lazy="false" fetch="join" inverse="true">
+<!--         key是外键   -->
+        <key column="PROBLEM_ID" />
+        <one-to-many class="com.zjut.oj.entity.study.ProblemAttachBean" />
+    </set>
+    <one-to-one name="problemContentBean"></one-to-one>
+</class>
+</hibernate-mapping>

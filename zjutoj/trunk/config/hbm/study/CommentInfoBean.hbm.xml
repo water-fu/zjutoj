@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.study.CommentInfoBean" 
+    table="study_comment_info"
+>
+
+	<id
+        name="commentId"
+        type="int"
+        column="COMMENT_ID"
+        length="10"
+    >
+    	<generator class="native" />
+    </id>
+	<property
+        name="parentId"
+        type="java.lang.Integer"
+        column="PARENT_ID"
+        length="10"
+        not-null="false"
+    />
+	<property
+        name="commentDesc"
+        type="java.lang.String"
+        column="COMMENT_DESC"
+    />
+	<property
+        name="operDate"
+        type="java.util.Date"
+        column="OPER_DATE"
+        length="19"
+    />
+	<many-to-one name="userInfoBean" class="com.zjut.oj.entity.system.UserInfoBean" column="OPER_USER" fetch="join" lazy="false" />
+	<many-to-one name="problemInfoBean" class="com.zjut.oj.entity.study.ProblemInfoBean" column="PROBLEM_ID" fetch="join" lazy="false" />
+	<set name="childCommentInfo" lazy="false" fetch="join" inverse="true">
+		<!-- key是外键   -->
+        <key column="PARENT_ID" />
+        <one-to-many class="com.zjut.oj.entity.study.CommentInfoBean" />
+    </set>
+</class>
+</hibernate-mapping>

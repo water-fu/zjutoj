@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name ="WebTest" default ="war" basedir =".">
+    <property  name ="classes" value ="${basedir}/build/classes"/>
+    <property  name ="build" value ="${basedir}/build"/>
+    <property  name ="lib" value ="${basedir}/WebContent/WEB-INF/lib"/>
+     <!--  删除build 路径-->
+    <target  name ="clean">
+        <delete dir ="${build}"/>
+    </target>
+	
+	<path id="lib">         
+	  <fileset dir="${lib}">  
+		  <include name="*.jar"/>  
+	  </fileset>      
+	</path> 
+ 
+     <!--  建立build/classes 路径，并编译class 文件到build/classes 路径下-->
+     <target name ="compile"  depends ="clean">
+        <mkdir dir ="${classes}"/>
+        <javac srcdir ="${basedir}/src"  destdir ="${classes}">
+			<compilerarg    line="-encoding GBK"/>
+			<classpath refid="lib"></classpath>
+		</javac>
+		<copy todir="${classes}">
+			<fileset dir="${basedir}/config">
+				<include name="**/**" />
+			</fileset>
+		</copy>
+     </target>
+
+ 
+     <!--  打war 包-->
+     <target name ="war" depends ="compile">
+        <war destfile ="${build}/acm.war"  webxml ="${basedir}/WebContent/WEB-INF/web.xml">
+            <!--  拷贝WebRoot 下除了WEB-INF 和META-INF 的两个文件夹-->
+			<fileset dir ="${basedir}/WebContent" >
+				<include name="**/**" />
+				<exclude name="WEB-INF/lib/**" />
+				<exclude name="META-INF/web.xml" />
+				<include name="WEB-INF/oj-tags.tld" />
+			</fileset>
+            <!--  拷贝lib 目录下的jar 包-->
+            <lib dir="${lib}">
+            	<exclude name="jsp-api.jar" />
+            	<exclude name="servlet-api.jar" />
+            </lib>
+            <!--  拷贝build/classes 下的class 文件-->
+            <classes dir ="${classes}">
+			</classes>
+        </war>
+     </target>
+</project>

@@ -1,0 +1,108 @@
+.table ul li {
+	font-size: 12px !important;
+}
+
+.context {
+	text-align: center;
+}
+
+.context ul {
+	font-size:0;
+}
+
+.context li {
+	line-height: 50px;
+/* 	float: left; */
+	display: inline-block;
+	width: 309px;
+	border-bottom: 1px dotted #CCC;
+	margin-bottom: -5px;
+}
+
+.context .title {
+	text-align: left;
+	width: 609px;
+	text-indent: 2em;
+}
+
+.context .info {
+	width: 159px;
+}
+
+.context li a {
+	color: #0088CC;
+	font-size: 12px;
+}
+
+/* 为后台管理列表页面样式更改 */
+.context .mtitle {
+	text-align: left;
+	width: 50%;
+	text-indent: 2em;
+}
+
+.context .minfo {
+	width: 18%;
+}
+
+.context .mtool {
+	width: 8%;
+/* 	text-align: right; */
+	padding-right: 10px;
+}
+/* 结束 */
+
+/* 为后台管理列表页面样式更改 */
+.context .title_4 {
+	text-align: left;
+	width: 58%;
+}
+
+.context .info_4 {
+	width: 14%;
+}
+
+/* 为后台管理列表页面样式更改 */
+.context .title_4_1 {
+	text-align: left;
+	width: 54%;
+}
+
+.context .date_4_1 {
+	width: 18%;
+}
+
+.context .info_4_1 {
+	width: 14%;
+}
+
+.context .title_5 {
+	text-align: left;
+	width: 56%;
+}
+
+.context .info_5 {
+	width: 11%;
+}
+
+/* 为后台管理列表页面样式更改 */
+.context .title_5_1 {
+	text-align: left;
+	width: 40%;
+}
+
+.context .info_5_1 {
+	width: 15%;
+}
+
+.list_bg {
+	background-color: #5AA3D8;
+	font-weight: bold;
+	text-align: center !important;
+	color: white;
+}
+
+.list_bg span {
+	font-size: 15px !important;
+}
+/* 结束 */

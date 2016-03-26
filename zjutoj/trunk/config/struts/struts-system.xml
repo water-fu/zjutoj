@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC     
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"     
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="system" namespace="/system" extends="zjutoj-struts">
+	    <action name="userInfoAction" class="userInfoAction"> 
+	       	<result name="success">/index.jsp</result>
+	    </action>
+	    
+	    <action name="messageInfoAction" class="messageInfoAction">
+	       	<result name="index">/pages/base/index.jsp</result>
+	       	<result name="list">/pages/base/list.jsp</result>
+	       	<result name="detail">/pages/base/detail.jsp</result>
+	       	
+	       	<result name="mlist">/pages/system/messageInfo/list.jsp</result>
+	       	<result name="mdetail">/pages/system/messageInfo/detail.jsp</result>
+	       	<result name="editUI">/pages/system/messageInfo/edit.jsp</result>
+	       	<result name="delete" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+<!-- 	       	<result name="save" type="redirect">/system/messageInfoAction.do?method=mdetail&amp;messageId=${#messageInfoBean.messageId} -->
+<!-- 	       	</result> -->
+	       	<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	    
+	    <action name="picsInfoAction" class="picsInfoAction">
+	    	<result name="editUI">/pages/base/settings.jsp</result>
+	    	<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	    
+	    <action name="loginInfoAction" class="loginInfoAction">
+	    	<result name="loginUI">/pages/base/login.jsp</result>
+	    	<result name="login" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="logout" type="redirect">
+	       		system/messageInfoAction.do?method=initIndexPage
+	       	</result>
+	    </action>
+	    
+	    <action name="hustojUserAction" class="hustojUserAction">
+	    	<result name="editUI">/pages/system/hustojUser/edit.jsp</result>
+	    	<result name="save" type="json">
+				<param name="root">responseMessage</param>
+			</result>
+			<result name="success">/pages/system/hustojUser/success.jsp</result>
+	    	<result name="mail" type="json">
+				<param name="root">responseMessage</param>
+			</result>
+			<result name="mlist">/pages/system/hustojUser/list.jsp</result>
+			<result name="export" type="json">
+				<param name="root">responseMessage</param>
+			</result>
+			<result name="genSignLink" type="json">
+				<param name="root">responseMessage</param>
+			</result>
+	    </action>
+	    
+	    <action name="mailTempAction" class="mailTempAction">
+	    	<result name="mlist">/pages/system/mailTemp/list.jsp</result>
+	    	<result name="editUI">/pages/system/mailTemp/edit.jsp</result>
+	    	<result name="save" type="json">
+	    		<param name="root">responseMessage</param>
+	    	</result>
+	    	<result name="mdetail">/pages/system/mailTemp/detail.jsp</result>
+	    	<result name="delete" type="json">
+	    		<param name="root">responseMessage</param>
+	    	</result>
+	    </action>
+	    
+	    <action name="hustojInfoAction" class="hustojInfoAction">
+	    	<result name="mlist">/pages/system/hustojInfo/list.jsp</result>
+	    	<result name="editUI">/pages/system/hustojInfo/edit.jsp</result>
+	    	<result name="save" type="json">
+	    		<param name="root">responseMessage</param>
+	    	</result>
+	    	<result name="mdetail">/pages/system/hustojInfo/detail.jsp</result>
+	    	<result name="delete" type="json">
+	    		<param name="root">responseMessage</param>
+	    	</result>
+	    </action>
+	</package>
+</struts>

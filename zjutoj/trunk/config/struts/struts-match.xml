@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC     
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"     
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="match" namespace="/match" extends="zjutoj-struts">
+	    <action name="contestInfoAction" class="contestInfoAction">
+	       	<result name="list">/pages/match/contestInfo/list.jsp</result>
+	       	<result name="detail">/pages/match/contestInfo/detail.jsp</result>
+	       	
+	       	<result name="mlist">/pages/admin/contestInfo/list.jsp</result>
+	       	<result name="mdetail">/pages/admin/contestInfo/detail.jsp</result>
+	       	<result name="editUI">/pages/admin/contestInfo/edit.jsp</result>
+	       	
+	       	<result name="problemList">/pages/admin/contestInfo/problemList.jsp</result>
+	       	<result name="userList">/pages/admin/contestInfo/userList.jsp</result>
+	       
+	       	<result name="delete" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="status" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="time" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	    
+	    <action name="contestProblemAction" class="contestProblemAction">
+    		<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="delete" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	    
+	    <action name="contestUserAction" class="contestUserAction">
+	    	<result name="save" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	       	<result name="delete" type="json">
+	       		<param name="root">responseMessage</param>
+	       	</result>
+	    </action>
+	</package>
+</struts>

@@ -1,0 +1,150 @@
+* {
+	font-size: 12px;
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* 广告区 */
+.adimages {
+	height: 300px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+/* Main区 */
+.main {
+	height: 250px;
+	margin-top: 10px;
+	width: 1000px;
+}
+
+.news {
+	width: 340px;
+	border: 1px solid #E8E8E8;
+	background-color: #FFF;
+	float: left;
+	display: inline;
+	height: 250px;
+}
+
+.title {
+	height: 35px;
+	border-bottom: 2px solid #E8E8E8;
+	line-height: 35px;
+}
+
+.title_left {
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #8E8E8E;
+	float: left;
+	padding-left: 20px;
+}
+
+.title_right {
+	float: right;
+	padding-right: 20px;
+}
+
+.title_right a {
+	color: #8E8E8E;
+}
+
+.news_detail {
+	height: 110px;
+	line-height: 20px;
+}
+
+.news_detail img {
+	width: 113px;
+	float: left;
+	margin: 10px;
+}
+
+.news_detail h2 {
+	background: url("../images/list.jpg") no-repeat center left;
+	padding-left: 10px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	padding-top: 10px;
+	margin-left: 5px;
+}
+
+.news_detail a {
+	color: black;
+}
+
+.news_detail p {
+	text-indent: 2em;
+	letter-spacing: 1px;
+	margin: 0 5px;
+}
+
+.news_detail span {
+	float: right;
+	color: #8E8E8E;
+	margin-right: 5px;
+	margin-top: -20px;
+}
+
+.news_list {
+	height: 100px;
+}
+
+.news_list li {
+	list-style-type: none;
+	background: url("../images/list.jpg") no-repeat center left;
+	padding-left: 10px;
+	line-height: 33px;
+	border-bottom: 1px dotted #CCC;
+	margin-left: 5px;
+}
+
+.news_list span {
+	float: right;
+	color: #8E8E8E;
+	margin-right: 5px;
+}
+
+.news_list a {
+	color: black;
+}
+
+.course {
+	width: 340px;
+	border: 1px solid #E8E8E8;
+	background-color: #FFF;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline;
+	height: 250px;
+}
+
+.video {
+	width: 294px;
+	border: 1px solid #E8E8E8;
+	background-color: #FFF;
+	float: left;
+	display: inline;
+	height: 250px;
+}
+
+.video_content {
+	height: 177px;
+}
+
+.video_content_top {
+	height: 130px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.video_content_bottom img {
+	height: 55px;
+	width: 214px;
+}

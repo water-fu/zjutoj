@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.study.ProblemContentBean" 
+    table="study_problem_content"
+>
+
+	<id
+        name="problemId"
+        type="int"
+        column="PROBLEM_ID"
+        length="10"
+    >
+    </id>
+	<property
+        name="problemDesc"
+        type="java.lang.String"
+        column="PROBLEM_DESC"
+    />
+	<property
+        name="problemInput"
+        type="java.lang.String"
+        column="PROBLEM_INPUT"
+    />
+	<property
+        name="problemOutput"
+        type="java.lang.String"
+        column="PROBLEM_OUTPUT"
+    />
+	<property
+        name="exampleInput"
+        type="java.lang.String"
+        column="EXAMPLE_INPUT"
+    />
+	<property
+        name="exampleOutput"
+        type="java.lang.String"
+        column="EXAMPLE_OUTPUT"
+    />
+	<property
+        name="operDate"
+        type="java.util.Date"
+        column="OPER_DATE"
+        length="19"
+    />
+	<many-to-one name="userInfoBean" class="com.zjut.oj.entity.system.UserInfoBean" column="OPER_USER" fetch="join" lazy="false" />
+</class>
+</hibernate-mapping>
