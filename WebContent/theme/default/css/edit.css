@@ -1,0 +1,117 @@
+* {
+	font-size: 12px;
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.title {
+	line-height: 80px;
+}
+
+.title h2 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #0088CC;
+}
+
+.context {
+	height: auto !important;
+	min-height: 450px;
+/* 	text-indent: 2em; */
+	text-align: center;
+	font-family: arial,sans-serif;
+	letter-spacing: 1px;
+	line-height: 25px;
+	padding: 10px;
+	box-shadow: 0 0 10px #ccc;
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-border-shadow: 0 0 10px #ccc;
+	/*background-color: white;*/
+}
+
+#saveForm span {
+	font-size: 13px;
+	font-family: arial,sans-serif;
+}
+
+#saveForm input, #saveForm select {  
+    border:1px solid #7A6F6F;  
+    border:1px solid #7A6F6F \9;/*IE*/  
+    width:100%;
+    height:20px;/*��IE�߶�*/  
+    height:20px \9;/*IE�߶�*/  
+    padding-left:5px; /*all*/  
+    line-height:20px \9;/*IE*/  
+    -moz-border-radius:3px;/*Firefox*/  
+    -webkit-border-radius:3px;/*Safari��Chrome*/  
+    border-radius:3px;/*IE9+*/
+    background-color:white;  
+    outline:none;
+    margin-bottom: 10px;
+}
+
+#saveForm input:focus {/*IE8+*/  
+    border-color:#78BAED;  
+    outline:1px solid #78BAED;/*chrome*/  
+}
+
+#saveForm textarea {  
+    border:1px solid #7A6F6F;  
+    border:1px solid #7A6F6F \9;/*IE*/  
+    width:100%;
+    height:200px;/*��IE�߶�*/  
+    height:200px \9;/*IE�߶�*/  
+    padding-left:5px; /*all*/  
+    line-height:20px \9;/*IE*/  
+    -moz-border-radius:3px;/*Firefox*/  
+    -webkit-border-radius:3px;/*Safari��Chrome*/  
+    border-radius:3px;/*IE9+*/
+    background-color:white;  
+    outline:none;
+    margin-bottom: 10px;
+    resize:none;
+}
+
+#saveForm textarea:focus {/*IE8+*/  
+    border-color:#78BAED;  
+    outline:1px solid #78BAED;/*chrome*/  
+}
+
+.multiple {
+	height: 200px !important;
+}
+
+.fileUpload input{
+	width: 93% !important;
+}
+
+.fileUpload a {
+	border: 1px solid grey;
+	padding: 3px;
+	border-radius: 5px;
+	color: #0088CC !important;
+}
+
+#saveForm table {
+	width: 100%;
+}
+
+#saveForm table td a{
+	color: black;
+}
+
+.fileLink {
+	text-align: left;
+}
+
+.fileLink li{
+	display: inline-block;
+}
+
+.fileLink img {
+	cursor: pointer;
+}

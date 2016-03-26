@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 配置为开发模式 -->
+    <constant name="struts.devMode" value="false" />
+    <!-- 把扩展名配置为action -->
+    <constant name="struts.action.extension" value="do" />
+    <!-- 把主题配置为simple -->
+    <constant name="struts.ui.theme" value="simple" />
+    
+    <constant name="struts.multipart.maxSize" value="10097152" />
+	
+   
+    <package name="zjutoj-struts" extends="json-default">
+    
+<!--     	<interceptors> -->
+<!--     		声明拦截器 -->
+<!--     		<interceptor name="checkPrivilege" class="cn.itcast.oa.util.CheckPrivilegeInterceptor"></interceptor> -->
+    		
+<!--     		重新定义默认的拦截器栈 -->
+<!--     		<interceptor-stack name="defaultStack"> -->
+<!--     			<interceptor-ref name="checkPrivilege"></interceptor-ref> -->
+<!--     			<interceptor-ref name="defaultStack"></interceptor-ref> -->
+<!--     		</interceptor-stack> -->
+<!--     	</interceptors> -->
+
+
+		<!-- 全局的Result配置 -->
+		<global-results>
+			<result name="loginUI">/pages/base/login.jsp</result>
+			<result name="noPrivilegeError">/noPrivilegeError.jsp</result>
+			<result name="error" type="json">
+				<param name="root">responseMessage</param>
+			</result>
+			<result name="syserror">
+				/error.jsp
+			</result>
+			<result name="input">
+				/error.jsp
+			</result>
+		</global-results>
+    </package>
+
+    <!-- Add packages here -->
+	<include file="struts/struts-*.xml"></include>
+</struts>

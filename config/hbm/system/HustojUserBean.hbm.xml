@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.system.HustojUserBean" 
+    table="system_hustoj_user"
+>
+
+	<id
+        name="userId"
+        type="int"
+        column="USER_ID"
+        length="10"
+    >
+    	<generator class="native" />
+    </id>
+    <property
+        name="matchId"
+        type="int"
+        column="MATCH_ID"
+        length="10"
+    />
+	<property
+        name="userNo"
+        type="java.lang.String"
+        column="USER_NO"
+        length="30"
+    />
+	<property
+        name="userName"
+        type="java.lang.String"
+        column="USER_NAME"
+        length="50"
+    />
+	<property
+        name="userClass"
+        type="java.lang.String"
+        column="USER_CLASS"
+        length="30"
+    />
+	<property
+        name="userSchool"
+        type="java.lang.String"
+        column="USER_SCHOOL"
+        length="30"
+    />
+	<property
+        name="userMail"
+        type="java.lang.String"
+        column="USER_MAIL"
+        length="30"
+    />
+	<property
+        name="userTel"
+        type="java.lang.String"
+        column="USER_TEL"
+        length="30"
+    />
+    <property
+        name="matchAccount"
+        type="java.lang.String"
+        column="MATCH_ACCOUNT"
+        length="30"
+    />
+    <property
+        name="matchPassword"
+        type="java.lang.String"
+        column="MATCH_PASSWORD"
+        length="30"
+    />
+	<property
+        name="operDate"
+        type="java.util.Date"
+        column="OPER_DATE"
+        length="19"
+    />
+    <property
+        name="userExp"
+        type="java.lang.String"
+        column="USER_EXP"
+        length="1024"
+    />
+</class>
+</hibernate-mapping>

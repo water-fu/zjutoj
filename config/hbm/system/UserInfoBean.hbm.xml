@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.system.UserInfoBean" 
+    table="system_user_info"
+>
+
+    <id
+        name="userId"
+        type="java.lang.Integer"
+        column="user_id"
+    >
+        <generator class="native" />
+    </id>
+
+    <property
+        name="userType"
+        type="java.lang.Integer"
+        column="user_type"
+        length="4"
+    />
+    <property
+        name="loginSign"
+        type="java.lang.String"
+        column="login_sign"
+        length="30"
+    />
+    <property
+        name="loginPass"
+        type="java.lang.String"
+        column="login_pass"
+        length="50"
+    />
+    <property
+        name="userMail"
+        type="java.lang.String"
+        column="user_mail"
+        length="30"
+    />
+    <property
+        name="userIden"
+        type="java.lang.String"
+        column="user_iden"
+        length="30"
+    />
+    <property
+        name="userTel"
+        type="java.lang.String"
+        column="user_tel"
+        length="30"
+    />
+    <property
+        name="userName"
+        type="java.lang.String"
+        column="user_name"
+        length="30"
+    />
+    <property
+        name="userMemo"
+        type="java.lang.String"
+        column="user_memo"
+        length="30"
+    />
+    <property
+        name="operUser"
+        type="java.lang.Integer"
+        column="oper_user"
+        length="10"
+    />
+    <property
+        name="operDate"
+        type="java.util.Date"
+        column="oper_date"
+    />
+    
+    <set name="userRoles" lazy="false" fetch="join" inverse="true" >
+        <!-- key是外键 --> 
+        <key column="USER_ID" />
+        <one-to-many class="com.zjut.oj.entity.system.UserRoleBean" />
+    </set>  
+</class>
+</hibernate-mapping>

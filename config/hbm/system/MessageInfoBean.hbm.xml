@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.system.MessageInfoBean" 
+    table="system_message_info"
+>
+
+	<id
+	        name="messageId"
+	        type="java.lang.Integer"
+	        column="MESSAGE_ID"
+	        length="10"
+	    >
+	    <generator class="native" />
+	</id>
+	<property
+	        name="messageType"
+	        type="java.lang.Integer"
+	        column="MESSAGE_TYPE"
+	        length="10"
+	    />
+	<property
+	        name="messageTitle"
+	        type="java.lang.String"
+	        column="MESSAGE_TITLE"
+	        length="40"
+	    />
+	<property
+	        name="messageContent"
+	        type="java.lang.String"
+	        column="MESSAGE_CONTENT"
+	    />
+	<property
+	        name="viewCount"
+	        type="java.lang.Integer"
+	        column="view_count"
+	        length="10"
+	    />
+	<property
+	        name="operDate"
+	        type="java.util.Date"
+	        column="OPER_DATE"
+	    />
+	<property
+	        name="createDate"
+	        type="java.util.Date"
+	        column="CREATE_DATE"
+	    />
+	
+	<many-to-one name="userInfoBean" class="com.zjut.oj.entity.system.UserInfoBean" column="OPER_USER" fetch="join" lazy="false" />
+	
+	<set name="messageAttchs" lazy="false" fetch="join" inverse="true" order-by="ATTACH_ID desc">
+        <!-- key是外键 -->  
+        <key column="MESSAGE_ID" />
+        <one-to-many class="com.zjut.oj.entity.system.MessageAttachBean" />
+    </set>  
+</class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+	<!-- 1，数据库连接信息 -->
+	<property name="dialect">
+		org.hibernate.dialect.MySQL5InnoDBDialect
+	</property>
+
+	<!-- 2，其他配置 -->
+	<property name="show_sql">false</property>
+	<property name="hbm2ddl.auto">update</property>
+	<property name="hibernate.format_sql">false</property>
+	<property name="hibernate.use_sql_comments">true</property>
+
+	<!-- 3，导入映射文件 -->
+	<mapping resource="/hbm/system/UserInfoBean.hbm.xml" />
+	<mapping resource="/hbm/system/MessageInfoBean.hbm.xml" />
+	<mapping resource="/hbm/system/MessageAttachBean.hbm.xml" />
+	<mapping resource="/hbm/system/PicsInfoBean.hbm.xml" />
+	<mapping resource="/hbm/system/MenuInfoBean.hbm.xml" />
+	<mapping resource="/hbm/system/RoleInfoBean.hbm.xml" />
+	<mapping resource="/hbm/system/RolePrivBean.hbm.xml" />
+	<mapping resource="/hbm/system/UserRoleBean.hbm.xml" />
+	<mapping resource="/hbm/system/HustojUserBean.hbm.xml" />
+	<mapping resource="/hbm/system/MailTempBean.hbm.xml" />
+	<mapping resource="/hbm/system/MailInfoBean.hbm.xml" />
+	<mapping resource="/hbm/system/HustojInfoBean.hbm.xml" />
+	
+	<mapping resource="/hbm/study/ProblemContentBean.hbm.xml" />
+	<mapping resource="/hbm/study/ProblemInfoBean.hbm.xml" />
+	<mapping resource="/hbm/study/TypeInfoBean.hbm.xml" />
+	<mapping resource="/hbm/study/ProblemAttachBean.hbm.xml" />
+	<mapping resource="/hbm/study/CommentInfoBean.hbm.xml" />
+	<mapping resource="/hbm/study/AnswerInfoBean.hbm.xml" />
+	
+	<mapping resource="/hbm/match/ContestInfoBean.hbm.xml" />
+	<mapping resource="/hbm/match/ContestProblemBean.hbm.xml" />
+	<mapping resource="/hbm/match/ContestUserBean.hbm.xml" />
+	<mapping resource="/hbm/match/LangInfoBean.hbm.xml" />
+</session-factory>
+
+</hibernate-configuration>

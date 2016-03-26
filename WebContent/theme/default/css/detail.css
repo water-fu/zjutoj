@@ -1,0 +1,141 @@
+.content {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.title {
+	line-height: 80px;
+}
+
+.title h2 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #0088CC;
+}
+
+.stas li {
+	float: left;
+	width: 330px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 13px;
+}
+
+.stas2 li {
+	float: left;
+	width: 490px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 13px;
+}
+
+.stas4 li {
+	float: left;
+	width: 250px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 13px;
+}
+
+.context {
+	margin-top: 33px;
+	height: auto !important;
+	min-height: 450px;
+	text-indent: 2em;
+	text-align: left;
+	font-family: arial,sans-serif;
+	letter-spacing: 1px;
+	line-height: 25px;
+	padding: 10px;
+	box-shadow: 0 0 10px #ccc;
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-border-shadow: 0 0 10px #ccc;
+	/*background-color: white;*/
+}
+
+.not_font {
+	text-indent: 0em !important;
+	margin-top: 0px !important;
+	font-size: 12px;
+}
+
+.not_top {
+	margin-top: 0px !important;
+}
+
+.context p {
+	font-size: 13px;
+}
+
+.context img {
+	height: expression(this.width > 100 ? this.height = this.height * 100 / this.width : "auto");
+	width: expression(this.width > 100 ? "100px" : "auto"); 
+	max-width:100px;
+}
+
+.realImg {
+	display: none;
+}
+
+.content_h2 {
+	font-size: 22px !important;
+	font-weight: bold;
+	color: #0000FF;
+	text-indent: 0;
+}
+
+.content_p {
+	background-color: white;
+	text-indent: 2em;
+	margin-bottom: 10px;
+}
+
+.comment {
+	margin-top: 10px;
+	background-color: white;
+/* 	display: inline-block; */
+}
+
+.comment_content {
+	text-indent: 2em;
+	margin: 3px;
+	min-height: 100px;
+	height: auto !important;
+}
+
+.statBar {
+	text-align: right;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.sub_li {
+	margin-left: 200px;
+	display: none;
+}
+
+.sub_comment {
+	margin: 3px;
+	text-align: left;
+	background-color: #F7F8FA;
+}
+
+.comment input {
+	width: 90%;
+	height: 30px;
+}
+
+.publish {
+	border: 1px solid grey;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+/*contest*/
+.contest_status {
+	text-align: center;
+	font-size: 25px !important;
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.system.MailInfoBean" 
+    table="system_mail_info"
+>
+
+	<id
+        name="mailId"
+        type="int"
+        column="MAIL_ID"
+        length="10"
+    >
+    	<generator class="native" />
+    </id>
+	<property
+        name="sendAccount"
+        type="java.lang.String"
+        column="SEND_ACCOUNT"
+        length="30"
+    />
+	<property
+        name="acceptAccount"
+        type="java.lang.String"
+        column="ACCEPT_ACCOUNT"
+        length="128"
+    />
+	<property
+        name="copyAccount"
+        type="java.lang.String"
+        column="COPY_ACCOUNT"
+        length="128"
+    />
+	<property
+        name="mailTitle"
+        type="java.lang.String"
+        column="MAIL_TITLE"
+        length="128"
+    />
+	<property
+        name="mailContent"
+        type="java.lang.String"
+        column="MAIL_CONTENT"
+        length="1024"
+    />
+	<property
+        name="sendState"
+        type="int"
+        column="SEND_STATE"
+        length="10"
+    />
+	<property
+        name="operDate"
+        type="java.util.Date"
+        column="OPER_DATE"
+        length="19"
+    />
+	<many-to-one name="hustojUserBean" class="com.zjut.oj.entity.system.HustojUserBean" column="USER_ID" fetch="join" lazy="false" />
+</class>
+</hibernate-mapping>

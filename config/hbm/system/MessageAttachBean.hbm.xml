@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.system.MessageAttachBean" 
+    table="system_message_attach"
+>
+
+    <id
+	        name="attachId"
+	        type="java.lang.Integer"
+	        column="ATTACH_ID"
+	        length="10"
+	    >
+	    <generator class="native" />
+	</id>
+	
+	<property
+	        name="messageId"
+	        type="int"
+	        column="MESSAGE_ID"
+	        length="10"
+	    />
+
+	<property
+	        name="attachType"
+	        type="int"
+	        column="ATTACH_TYPE"
+	        length="10"
+	    />
+	<property
+	        name="attachName"
+	        type="java.lang.String"
+	        column="ATTACH_NAME"
+	        length="40"
+	    />
+	<property
+	        name="attachUrl"
+	        type="java.lang.String"
+	        column="ATTACH_URL"
+	        length="200"
+	    />
+	<property
+	        name="operDate"
+	        type="java.util.Date"
+	        column="OPER_DATE"
+	        length="19"
+	    />
+	    
+	<many-to-one name="userInfoBean" class="com.zjut.oj.entity.system.UserInfoBean" column="OPER_USER" fetch="join" lazy="false" />
+</class>
+</hibernate-mapping>

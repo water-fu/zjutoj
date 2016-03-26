@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+
+<class 
+    name="com.zjut.oj.entity.system.HustojInfoBean" 
+    table="system_hustoj_info"
+>
+
+	<id
+        name="matchId"
+        type="int"
+        column="MATCH_ID"
+        length="10"
+    >
+    	<generator class="native" />
+    </id>
+	<property
+        name="matchTitle"
+        type="java.lang.String"
+        column="MATCH_TITLE"
+        length="30"
+    />
+	<property
+        name="signFrom"
+        type="java.util.Date"
+        column="SIGN_FROM"
+        length="19"
+    />
+	<property
+        name="signEnd"
+        type="java.util.Date"
+        column="SIGN_END"
+        length="19"
+    />
+	<property
+        name="matchDate"
+        type="java.util.Date"
+        column="MATCH_DATE"
+        length="19"
+    />
+	<property
+        name="operUser"
+        type="int"
+        column="OPER_USER"
+        length="10"
+    />
+	<property
+        name="operDate"
+        type="java.util.Date"
+        column="OPER_DATE"
+        length="19"
+    />
+
+</class>
+</hibernate-mapping>
